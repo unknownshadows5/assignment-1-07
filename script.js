@@ -25,7 +25,8 @@
 <
 script >
 
-    var init = 16; // initial font size
+    var init = 16;
+
 function arrow(event) {
     event.preventDefault();
     var par = document.getElementById("balloon");
@@ -45,7 +46,29 @@ function arrow(event) {
             break;
     }
 }
-window.addEventListener("keydown", arrow); //Event listener when key is pressed
+window.addEventListener("keydown", arrow);
 
 <
 /script>
+
+function openCity(evt, n) {
+
+    var i, tabcontent, tablinks;
+
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
