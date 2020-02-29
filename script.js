@@ -63,7 +63,7 @@ function openCity(evt, n) {
 
 
 
-    tablinks = document.getElementsByClassName("tablinks");
+    tablinks = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
